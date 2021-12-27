@@ -124,7 +124,7 @@ def find_cluster_degs(
     test group and control groups,the expression fold change between the test 
     and control groups(log2fc),in addition, qval is calculated using Benjamini-
     Hochberg.
-    Parametersa
+    Parameters
     ----------
         adata: :class:`~anndata.AnnData`
             an Annodata object
@@ -285,8 +285,8 @@ def find_spatial_cluster_degs(
 
     Returns
     -------
-        adj: `np.ndarray`
-            An array of the distance matrix for each buckets.
+        A pandas DataFrame of the differential expression analysis result between
+        the test group and neighbor groups.
 
     '''
     # get x,y
