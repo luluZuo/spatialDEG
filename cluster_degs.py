@@ -336,10 +336,10 @@ def find_spatial_cluster_degs(
     test_df = df[df["group"]==test_group]
 
     # KNN    
-    XYmap = pd.DataFrame({'x': x, "y": y})
-    XYnbrs = NearestNeighbors(n_neighbors=k, algorithm='auto', metric='euclidean').fit(XYmap)
-    _, XYindices = XYnbrs.kneighbors(XYmap)
-    nbr_id = XYindices[test_df.index]
+    xymap = pd.DataFrame({'x': x, "y": y})
+    xynbrs = NearestNeighbors(n_neighbors=k, algorithm='auto', metric='euclidean').fit(xymap)
+    _, xyindices = xynbrs.kneighbors(xymap)
+    nbr_id = xyindices[test_df.index]
     nbr_id
     ## neighbor count
     nbr_id_unique = np.unique(nbr_id)
