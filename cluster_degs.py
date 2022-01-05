@@ -6,7 +6,6 @@ from scipy.stats import mannwhitneyu
 from statsmodels.sandbox.stats.multicomp import multipletests
 from sklearn.neighbors import NearestNeighbors
 from collections import Counter
-
 def find_spatial_cluster_degs(
     test_group,
     adata,
